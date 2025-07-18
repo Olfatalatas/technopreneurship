@@ -226,24 +226,44 @@ function getRecommendation() {
 
   switch (type) {
     case "rapat":
-      recommendation = "🔊 Paket Hemat: 2 Speaker Aktif + 1 Mic Wireless";
+      recommendation = `
+        🎧 <strong>SMALLO (1000W)</strong><br>
+        Sound Out 2 pcs, Mixer Digital,<br>
+        Mic Wireless 2 pcs, Mic Kabel 2 pcs<br>
+        <strong>Harga: Rp 750.000,-</strong>
+      `;
       break;
     case "seminar":
-      recommendation = "📢 Paket Seminar: 4 Speaker + Mixer Digital + 3 Mic Wireless";
+      recommendation = `
+        🔈 <strong>MINIMO (1500W)</strong><br>
+        Sound Out 2 pcs, Floor Monitor 1 pcs,<br>
+        Mixer Digital, Mic Wireless 2 pcs, Mic Kabel 2 pcs<br>
+        <strong>Harga: Rp 1.000.000,-</strong>
+      `;
       break;
     case "wedding":
-      recommendation = "💍 Paket Wedding Premium: 6 Speaker, Subwoofer, Mixer FX, dan teknisi onsite";
+      recommendation = `
+        🔊 <strong>MEDIUMO (3000W)</strong><br>
+        Sound Out (15 inch), Subwoofer 2 Set,<br>
+        Floor Monitor 2 pcs, Mixer Digital,<br>
+        Mic Wireless 4 pcs, Mic Kabel 2 pcs<br>
+        <strong>Harga: Rp 1.700.000,-</strong>
+      `;
       break;
     case "konser":
-      recommendation = "🎤 Paket Konser Mini: 8 Speaker, 2 Subwoofer, Mixer Pro, 6 Mic, Sound Engineer";
-      break;
     case "komunitas":
-      recommendation = "🎉 Paket Komunitas: 4 Speaker, Mic + Musik Playback + Support Setup Venue";
+      recommendation = `
+        🔥 <strong>BINGGO (5000W)</strong><br>
+        Sound Out (2 x 15 inch), Subwoofer 2 Set,<br>
+        Floor Monitor 4 pcs, Mixer Digital,<br>
+        Mic Wireless 4 pcs, Mic Kabel 4 pcs<br>
+        <strong>Harga: Rp 3.000.000,-</strong>
+      `;
       break;
     default:
       recommendation = "Silakan pilih jenis acara terlebih dahulu.";
   }
 
-  result.innerHTML = `<strong>Rekomendasi:</strong><br>${recommendation}`;
+  result.innerHTML = `<div>${recommendation}</div>`;
 }
 </script>
