@@ -1,0 +1,479 @@
+/* Variabel CSS untuk Warna */
+:root {
+    --primary-color: #000000; /* Hitam */
+    --accent-color: #FFCA2A; /* Kuning */
+    --text-color: #f0f0f0; /* Abu-abu terang untuk teks umum */
+    --light-text-color: #cccccc; /* Abu-abu lebih terang */
+    --dark-background-light: #1a1a1a; /* Hitam sedikit lebih terang untuk kartu */
+    --dark-background-dark: #0a0a0a; /* Hitam lebih gelap untuk footer */
+    --border-color: #333333; /* Warna border gelap */
+}
+ 
+/* Reset CSS dasar dan pengaturan Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+/* Styling Body Umum */
+body {
+    font-family: 'Open Sans', sans-serif; /* Menggunakan Open Sans untuk body */
+    line-height: 1.6;
+    color: var(--text-color);
+    background: var(--primary-color);
+    overflow-x: hidden; /* Mencegah scroll horizontal yang tidak diinginkan */
+}
+ 
+/* Kontainer untuk Konten Pusat */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+ 
+/* Styling Heading */
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', sans-serif; /* Montserrat untuk heading */
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+ 
+/* Styling Paragraf */
+p {
+    margin-bottom: 10px;
+}
+ 
+/* Styling Link */
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+ 
+a:hover {
+    color: #e0b322; /* Kuning sedikit lebih gelap saat hover */
+    text-decoration: underline;
+}
+ 
+/* Menghilangkan bullet point dari daftar */
+ul {
+    list-style: none;
+}
+ 
+/* Kelas untuk teks berwarna kuning */
+.yellow-text {
+    color: var(--accent-color);
+}
+ 
+/* Styling Tombol Umum */
+.btn {
+    display: inline-block;
+    background: var(--accent-color);
+    color: var(--primary-color);
+    padding: 12px 25px;
+    border-radius: 8px; /* Sudut lebih membulat */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(255, 202, 42, 0.2); /* Shadow pada tombol */
+}
+ 
+.btn:hover {
+    background-color:rgb(0, 0, 0); /* Kuning sedikit lebih gelap */
+    transform: translateY(-2px); /* Efek angkat saat hover */
+    text-decoration: none;
+}
+ 
+/* Styling Tombol Sekunder (Outline) */
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    padding: 10px 20px;
+    box-shadow: none; /* Hilangkan shadow default */
+}
+ 
+.btn-secondary:hover {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    box-shadow: 0 4px 10px rgba(255, 202, 42, 0.3); /* Shadow saat hover */
+}
+ 
+/* Bagian Header */
+header {
+    background: var(--primary-color);
+    color: #fff;
+    padding: 0px 0;
+    border-bottom: 1px solid var(--border-color);
+    position: sticky; /* Header tetap di atas saat di-scroll */
+    top: 0;
+    z-index: 1000; /* Pastikan header di atas elemen lain */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+ 
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ 
+.logo h1 {
+    font-size: 2.8em; /* Ukuran font logo */
+    margin: 0;
+    font-weight: 700;
+}
+ 
+.logo-img {
+    height: 70px; /* Sesuaikan tinggi logo gambar */
+    vertical-align: middle;
+}
+ 
+nav ul {
+    display: flex;
+}
+ 
+nav ul li {
+    margin-left: 30px; /* Jarak antar item navigasi */
+}
+ 
+nav ul li a {
+    color: var(--text-color);
+    font-weight: 600; /* Lebih tebal */
+    transition: color 0.3s ease;
+}
+ 
+nav ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+ 
+/* Bagian Hero */
+.hero {
+background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('https://images.unsplash.com/photo-1497911270199-1c552ee64aa4?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+    /* Ganti URL gambar di atas dengan gambar background yang lebih relevan jika ada */
+    text-align: center;
+    padding: 120px 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    min-height: 70vh; /* Tinggi minimum hero section */
+    justify-content: center;
+}
+ 
+.hero-content h2 {
+    font-size: 4em; /* Ukuran judul hero */
+    margin-bottom: 25px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Shadow pada teks judul */
+}
+ 
+.hero-content p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: var(--light-text-color);
+}
+ 
+/* Bagian Paket Produk */
+.packages-section {
+    padding: 100px 0;
+    text-align: center;
+    background: var(--primary-color);
+}
+ 
+.packages-section h3 {
+    font-size: 3.2em;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+ 
+.packages-section h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+ 
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Kolom responsif */
+    gap: 35px; /* Jarak antar kartu */
+}
+ 
+.package-card {
+    background: var(--dark-background-light); /* Latar belakang kartu */
+    border: 1px solid var(--border-color);
+    border-radius: 12px; /* Sudut lebih membulat */
+    padding: 35px;
+    text-align: left;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Shadow kartu */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+ 
+.package-card:hover {
+    transform: translateY(-12px); /* Efek angkat saat hover */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6); /* Shadow lebih besar saat hover */
+}
+ 
+.package-card h4 {
+    font-size: 2em;
+    color: var(--accent-color);
+    margin-bottom: 18px;
+}
+ 
+.package-card .price {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+}
+ 
+.package-card ul {
+    margin-bottom: 30px;
+    flex-grow: 1; /* Memungkinkan daftar fitur untuk mengisi ruang */
+}
+ 
+.package-card ul li {
+    margin-bottom: 12px;
+    font-size: 1.15em;
+    color: var(--light-text-color);
+    display: flex;
+    align-items: flex-start; /* Alignment item daftar */
+}
+ 
+.package-card ul li .fas {
+    color: var(--accent-color);
+    margin-right: 12px;
+    font-size: 1.2em;
+    padding-top: 2px; /* Penyesuaian vertikal ikon */
+}
+ 
+.package-card .btn {
+    width: 100%;
+    text-align: center;
+}
+ 
+/* Styling Khusus untuk Paket Unggulan (Minimo) */
+.package-card.featured {
+    background: var(--accent-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color); /* Border hitam */
+    transform: scale(1.07); /* Lebih menonjol */
+    box-shadow: 0 10px 25px rgba(255, 202, 42, 0.5); /* Shadow kuning */
+}
+ 
+.package-card.featured h4 {
+    color: var(--primary-color);
+}
+ 
+.package-card.featured .price {
+    color: var(--primary-color);
+}
+ 
+.package-card.featured ul li {
+    color: var(--primary-color);
+}
+ 
+.package-card.featured ul li .fas {
+    color: var(--primary-color);
+}
+ 
+.package-card.featured .btn {
+    background: var(--primary-color);
+    color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+ 
+.package-card.featured .btn:hover {
+    background: #333333; /* Abu-abu gelap saat hover */
+    color: var(--accent-color);
+}
+ 
+/* Bagian Add-Ons */
+.addons-section {
+    padding: 100px 0;
+    text-align: center;
+    background: #0a0a0a; /* Latar belakang sedikit berbeda */
+}
+ 
+.addons-section h3 {
+    font-size: 3.2em;
+    margin-bottom: 60px;
+    position: relative;
+    display: inline-block;
+}
+ 
+.addons-section h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+ 
+.addons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+ 
+.addon-item {
+    background: var(--dark-background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: left;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+ 
+.addon-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+ 
+.addon-item h4 {
+    color: var(--accent-color);
+    font-size: 1.8em;
+    margin-bottom: 12px;
+}
+ 
+.addon-item p, .addon-item ul {
+    color: var(--light-text-color);
+    font-size: 1.05em;
+}
+ 
+.addon-item ul {
+    margin-top: 10px;
+}
+ 
+.addon-item ul li {
+    margin-bottom: 8px;
+    list-style: none; /* Hapus bullet default */
+    display: flex; /* Menggunakan flexbox */
+    align-items: flex-start; /* Alignment item daftar */
+    /* Menghapus justify-content: space-between; dan flex-wrap: wrap; */
+}
+ 
+.addon-item ul li .fas {
+    color: var(--accent-color);
+    margin-right: 10px;
+    font-size: 1.1em;
+    padding-top: 2px;
+    flex-shrink: 0; /* Mencegah ikon menyusut */
+}
+ 
+/* KELAS BARU UNTUK NAMA ADD-ON */
+.addon-item ul li .addon-name {
+    flex-grow: 1; /* Memungkinkan nama mengisi ruang yang tersedia */
+    margin-right: 10px; /* Memberikan sedikit jarak antara nama dan harga */
+    white-space: nowrap; /* Mencegah nama memecah baris */
+    overflow: hidden; /* Sembunyikan jika terlalu panjang */
+    text-overflow: ellipsis; /* Tambahkan elipsis jika terpotong */
+}
+ 
+/* PERBAIKAN UNTUK HARGA DI DALAM LI */
+.addon-item ul li .price-addon {
+    margin-top: 0; /* Menghilangkan margin-top tambahan jika di dalam LI */
+    flex-shrink: 0; /* Mencegah harga menyusut */
+    text-align: right; /* Meratakan harga ke kanan */
+    display: inline-block; /* Pastikan ini inline-block agar flexbox bekerja */
+    margin-left: auto; /* INI KUNCI UTAMA: Mendorong harga ke paling kanan */
+    white-space: nowrap; /* Mencegah harga memecah baris */
+}
+ 
+ 
+.addon-item .description {
+    font-size: 0.95em;
+    color: var(--light-text-color);
+    margin-top: 5px;
+}
+ 
+/* Bagian Kontak */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+    background: var(--primary-color);
+}
+ 
+.contact-section h3 {
+    font-size: 3.2em;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+ 
+.contact-section h3::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+ 
+.contact-section p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 35px auto;
+    color: var(--light-text-color);
+}
+ 
+.contact-info {
+    margin-bottom: 40px;
+}
+ 
+.contact-info p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text-color);
+}
+ 
+.contact-info p .fas, .contact-info p .fab {
+    color: var(--accent-color);
+    margin-right: 15px;
+    font-size: 1.4em;
+}
+ 
+.contact-info p a {
+    color: var(--light-text-color);
+    transition: color 0.3s ease;
+}
+ 
+.contact-info p a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+ 
+.social-links {
+    margin-top: 30px;
+}
+ 
+.social-links a {
+    display: inline-block;
+    color: var(--accent-color);
+    font-size: 2.2em;
+    margin: 0 15px;
+}
