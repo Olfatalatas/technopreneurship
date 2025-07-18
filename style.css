@@ -477,3 +477,54 @@ background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('http
     font-size: 2.2em;
     margin: 0 15px;
 }
+
+/* Bagian Rekomendasi AI */
+.ai-recommendation {
+    padding: 100px 20px;
+    background-color: var(--dark-background-dark);
+    text-align: center;
+}
+
+.ai-recommendation h3 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: var(--accent-color);
+}
+
+.ai-recommendation select {
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--dark-background-light);
+    color: var(--text-color);
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.ai-recommendation button {
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+    border: none;
+    padding: 12px 25px;
+    font-size: 1em;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.ai-recommendation button:hover {
+    background-color: #e0b322;
+    transform: translateY(-2px);
+}
+
+.ai-result {
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: var(--light-text-color);
+    background-color: var(--dark-background-light);
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}

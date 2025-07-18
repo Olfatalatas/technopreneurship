@@ -167,6 +167,24 @@
         </div>
     </section>
 
+    <section class="ai-recommendation" id="ai">
+        <div class="container">
+            <h3>Dapatkan Rekomendasi Paket Secara Instan</h3>
+            <p>Pilih jenis acara Anda, dan sistem kami akan merekomendasikan paket sound system terbaik!</p>
+            <select id="event-type">
+            <option value="">-- Pilih Jenis Acara --</option>
+            <option value="rapat">Rapat Kecil</option>
+            <option value="seminar">Seminar</option>
+            <option value="wedding">Pernikahan</option>
+            <option value="konser">Mini Konser</option>
+            <option value="komunitas">Acara Komunitas</option>
+            </select>
+            <br />
+            <button onclick="getRecommendation()">Lihat Rekomendasi</button>
+            <div class="ai-result" id="ai-result"></div>
+        </div>
+    </section>
+
     <!-- Bagian Kontak -->
     <section id="contact" class="contact-section">
         <div class="container">
@@ -198,3 +216,34 @@
     </footer>
 </body>
 </html>
+
+<script>
+function getRecommendation() {
+  const type = document.getElementById("event-type").value;
+  const result = document.getElementById("ai-result");
+
+  let recommendation = "";
+
+  switch (type) {
+    case "rapat":
+      recommendation = "🔊 Paket Hemat: 2 Speaker Aktif + 1 Mic Wireless";
+      break;
+    case "seminar":
+      recommendation = "📢 Paket Seminar: 4 Speaker + Mixer Digital + 3 Mic Wireless";
+      break;
+    case "wedding":
+      recommendation = "💍 Paket Wedding Premium: 6 Speaker, Subwoofer, Mixer FX, dan teknisi onsite";
+      break;
+    case "konser":
+      recommendation = "🎤 Paket Konser Mini: 8 Speaker, 2 Subwoofer, Mixer Pro, 6 Mic, Sound Engineer";
+      break;
+    case "komunitas":
+      recommendation = "🎉 Paket Komunitas: 4 Speaker, Mic + Musik Playback + Support Setup Venue";
+      break;
+    default:
+      recommendation = "Silakan pilih jenis acara terlebih dahulu.";
+  }
+
+  result.innerHTML = `<strong>Rekomendasi:</strong><br>${recommendation}`;
+}
+</script>
